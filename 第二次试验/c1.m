@@ -1,0 +1,28 @@
+clear all;
+close all;
+r= 0.02;
+t=-5:r:5;
+N=200;
+w=2*pi;
+k=-N:N;
+w=k*w/N;
+f1=1/2*exp(-2*t).*stepfun(t,0);
+F=r*f1*exp(-j*t'*w);
+F1=abs(F);
+P1=angle(F);
+subplot(3,1,1);
+plot(t,f1);
+grid on;
+xlabel('t');
+ylabel('f(t)');
+title('f(t)');
+subplot(3,1,2);
+plot(w,F1);
+xlabel('w');
+grid on;
+ylabel('F(jw)');
+subplot(3,1,3);
+plot(w,P1*180/pi);
+grid;
+xlabel('w');
+ylabel('œ‡Œª£®∂»£©')

@@ -1,0 +1,15 @@
+clear all;
+close all;
+t=-3:0.001:3;
+ft=tripuls(t,4,0.5);
+subplot(3,1,1);
+plot(t,ft);
+title('f(t)');
+ft1=tripuls(2*t,4,0.5);
+subplot(3,1,2);
+plot(t,ft1);
+title('f(2t)');
+ft2=tripuls((2-2*t),4,0.5);
+subplot(3,1,3);
+plot(t,ft2);
+title('f(2-2t)');

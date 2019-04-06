@@ -1,0 +1,12 @@
+clear all;
+close all;
+h=0.001;
+t=-3:h:3;
+ft=tripuls(t,4,0.5);
+subplot(3,1,1);
+plot(t,ft);
+title('f(t)');
+y1=diff(ft)*1/h;
+subplot(3,1,2);
+plot(t(1:length(t)-1),y1);
+title('the differentiation of f(t)');
